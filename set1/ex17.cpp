@@ -6,7 +6,7 @@ float getTriangleArea(int A, int H)
     return ((A / (float)2) * H);
 }
 
-float readRectangle(void)
+float readTriangle(void)
 {
     int A, H;
 
@@ -26,6 +26,6 @@ void printTriangleArea(float Area)
 
 int main(void)
 {
-    printTriangleArea(readRectangle());
+    printTriangleArea(readTriangle());
     return (0);
 }
