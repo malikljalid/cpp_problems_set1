@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-float getCircleArea(int D)
+float getCircleArea(float D)
 {
     const float PI = 3.141592653589793238;
 
