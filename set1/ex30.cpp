@@ -4,8 +4,27 @@ int readNumber(void)
 {
     int Number;
 
-    std::cout << "Please enter a number : ";
+    std::cout << "Please enter a positive number : ";
     std::cin >> Number;
+
+    return (Number);
+}
+
+bool numberIsNegative(int Number)
+{
+    return (Number < 0);
+}
+
+int readPostiveNumber(void)
+{
+    int Number;
+
+    do
+    {
+        std::cout << "\nNegative numbers are invalid!\n";
+        Number = readNumber();
+    }
+    while (numberIsNegative(Number));
 
     return (Number);
 }
@@ -28,6 +47,6 @@ void printFactorialOf(int Number)
 
 int main(void)
 {
-    printFactorialOf(readNumber());
+    printFactorialOf(readPostiveNumber());
     return (0);
 }
