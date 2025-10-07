@@ -4,8 +4,12 @@ int readMonth(void)
 {
     int Month;
 
-    std::cout << "Please enter a Month Number : ";
-    std::cin >> Month;
+    do
+    {
+        std::cout << "Please enter a Month Number : ";
+        std::cin >> Month;
+    }
+    while (Month < 1 || Month > 12);
 
     return (Month - 1); // reduce 1 : to much months names array index
 }
